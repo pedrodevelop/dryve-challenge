@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Toolbar, Typography } from '@material-ui/core';
+import { Toolbar } from '@material-ui/core';
 import AppBar from './styles';
 
 function Header() {
@@ -8,9 +8,7 @@ function Header() {
     <>
       <AppBar position="fixed">
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            DryverPro
-          </Typography>
+          <img alt="" src="/assets/Logo.svg" />
         </Toolbar>
       </AppBar>
     </>

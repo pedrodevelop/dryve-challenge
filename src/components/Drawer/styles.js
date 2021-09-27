@@ -2,7 +2,7 @@ import { styled } from '@material-ui/core/styles';
 
 import MuiVariantDrawer from '@material-ui/core/Drawer';
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 
 const openedMixin = theme => ({
   width: drawerWidth,
@@ -19,9 +19,9 @@ const closedMixin = theme => ({
     duration: theme.transitions.duration.leavingScreen
   }),
   overflowX: 'hidden',
-  width: `calc(${theme.spacing(7)} + 1px)`,
+  width: `calc(${theme.spacing(9)} + 1px)`,
   [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(9)} + 1px)`
+    width: `calc(${theme.spacing(11)} + 1px)`
   }
 });
 
@@ -42,10 +42,23 @@ export const MuiDrawer = styled(MuiVariantDrawer, {
   boxSizing: 'border-box',
   ...(open && {
     ...openedMixin(theme),
-    '& .MuiDrawer-paper': openedMixin(theme)
+    '& .MuiDrawer-paper': openedMixin(theme),
+    '& .MuiListItem-button': {
+      transition: theme.transitions.create('padding', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen
+      })
+    }
   }),
   ...(!open && {
     ...closedMixin(theme),
-    '& .MuiDrawer-paper': closedMixin(theme)
+    '& .MuiDrawer-paper': closedMixin(theme),
+    '& .MuiListItem-button': {
+      paddingLeft: theme.spacing(1),
+      transition: theme.transitions.create('padding', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen
+      })
+    }
   })
 }));
