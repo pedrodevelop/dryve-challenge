@@ -40,11 +40,21 @@ export const MuiDrawer = styled(MuiVariantDrawer, {
   flexShrink: 0,
   whiteSpace: 'nowrap',
   boxSizing: 'border-box',
+  '& .retractIcon': {
+    width: '100%'
+  },
   ...(open && {
     ...openedMixin(theme),
     '& .MuiDrawer-paper': openedMixin(theme),
     '& .MuiListItem-button': {
       transition: theme.transitions.create('padding', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen
+      })
+    },
+    '& .MuiListItemIcon-root': {
+      minWidth: 0,
+      transition: theme.transitions.create('min-width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
       })
@@ -56,6 +66,13 @@ export const MuiDrawer = styled(MuiVariantDrawer, {
     '& .MuiListItem-button': {
       paddingLeft: theme.spacing(1),
       transition: theme.transitions.create('padding', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen
+      })
+    },
+    '& .MuiListItemIcon-root': {
+      minWidth: 56,
+      transition: theme.transitions.create('min-width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
       })

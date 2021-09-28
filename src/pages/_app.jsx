@@ -7,6 +7,7 @@ import Layout from '../components/MainLayout';
 
 import Drawer from '../components/Drawer';
 import Header from '../components/Header';
+import ContentLayout from '../components/ContentLayout';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,7 +15,9 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Header />
         <Drawer />
-        <Component {...pageProps} />
+        <ContentLayout>
+          <Component {...pageProps} />
+        </ContentLayout>
         <GlobalStyle />
       </Layout>
     </>

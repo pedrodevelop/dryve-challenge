@@ -1,26 +1,21 @@
 import React from 'react';
 
-import {
-  Button,
-  ListItem,
-  ListItemIcon,
-  ListItemText
-} from '@material-ui/core';
+import { Box, ListItemIcon, ListItemText, SvgIcon } from '@material-ui/core';
 
-import ListItems from './Items';
+import ListItem from './Items';
 import List from './List';
 
 import { MuiDrawer, DrawerHeader } from './styles';
 
-import getIcon from '../../utils/getIcon';
+import getIcon from '../getIcon';
 
-const items = [
-  { text: 'Resumo', icon: 'dashboard' },
+const drawerItems = [
+  { text: 'Resumo', icon: 'dashboard', page: '/' },
   { text: 'Oportunidades', icon: 'tags' },
   { text: 'Agenda', icon: 'calendar' },
   { text: 'Veículos', icon: 'vehicle' },
   { text: 'Publicação', icon: 'rocket' },
-  { text: 'Contatos', icon: 'user' },
+  { text: 'Contatos', icon: 'user', page: '/contacts' },
   { text: 'Analytics', icon: 'chart' },
   { text: 'Financiamento', icon: 'bank' }
 ];
@@ -37,18 +32,19 @@ function Drawer() {
       <MuiDrawer variant="permanent" open={open}>
         <DrawerHeader />
         <List>
-          {items.map(item => (
-            <ListItems key={item}>
+          {drawerItems.map(item => (
+            <ListItem href={item.page} key={item.text}>
               <ListItemIcon>
-                <img alt="" src={getIcon(item.icon)} />
+                <SvgIcon className="itemsIcon">{getIcon(item.icon)}</SvgIcon>
               </ListItemIcon>
               <ListItemText primary={item.text} />
-            </ListItems>
+            </ListItem>
           ))}
-          <ListItem>
-            <Button onClick={handleDrawerControl}>Clique</Button>
-          </ListItem>
         </List>
+        <Box sx={{ flexGrow: 1 }} />
+        <SvgIcon className="retractIcon" onClick={handleDrawerControl}>
+          {getIcon('retract')}
+        </SvgIcon>
       </MuiDrawer>
     </>
   );
