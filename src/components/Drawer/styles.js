@@ -40,12 +40,16 @@ export const MuiDrawer = styled(MuiVariantDrawer, {
   flexShrink: 0,
   whiteSpace: 'nowrap',
   boxSizing: 'border-box',
-  '& .retractIcon': {
-    width: '100%'
-  },
   ...(open && {
     ...openedMixin(theme),
     '& .MuiDrawer-paper': openedMixin(theme),
+    '& .retractIcon': {
+      transform: 'rotateY(0deg)',
+      transition: theme.transitions.create('transform', {
+        easing: theme.transitions.easing.sharp,
+        duration: '.4s'
+      })
+    },
     '& .MuiListItem-button': {
       transition: theme.transitions.create('padding', {
         easing: theme.transitions.easing.sharp,
@@ -63,9 +67,16 @@ export const MuiDrawer = styled(MuiVariantDrawer, {
   ...(!open && {
     ...closedMixin(theme),
     '& .MuiDrawer-paper': closedMixin(theme),
+    '& .retractIcon': {
+      transform: 'rotateY(180deg)',
+      transition: theme.transitions.create('transform', {
+        easing: theme.transitions.easing.sharp,
+        duration: '.4s'
+      })
+    },
     '& .MuiListItem-button': {
       paddingLeft: theme.spacing(1),
-      transition: theme.transitions.create('padding', {
+      transition: theme.transitions.create('padding, background-color', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
       })

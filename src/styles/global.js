@@ -6,4 +6,8 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  main {
+    padding-top: 64px;
+  }
 `;

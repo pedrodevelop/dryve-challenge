@@ -8,7 +8,7 @@ import { styled } from '@material-ui/core/styles';
 const Box = styled(MuiBox)(({ theme }) => ({
   height: '100vh',
   flexGrow: 1,
-  paddingTop: theme.spacing(8),
+  padding: theme.spacing(4, 0, 0, 3),
   backgroundColor: '#f9f9f9'
 }));
 
@@ -17,7 +17,7 @@ function ContentLayout(props) {
 
   return (
     <>
-      <Box component="main">{children}</Box>
+      <Box component="div">{children}</Box>
     </>
   );
 }

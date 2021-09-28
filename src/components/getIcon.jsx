@@ -2,17 +2,6 @@ import React from 'react';
 
 function getIcon(icon) {
   switch (icon) {
-    case 'retract':
-      return (
-        <path
-          d="M15 8L11 12L15 16 M8 8L8 16 M19 12L11 12"
-          fill="none"
-          stroke="#A3A3A3"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      );
     case 'bank':
       return (
         <path
