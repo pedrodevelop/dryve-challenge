@@ -13,7 +13,7 @@ function Header() {
     <>
       <AppBar position="fixed">
         <Toolbar>
-          <img alt="" src="/assets/Logo.svg" />
+          <img alt="" src="/assets/Logos/DryveLogo.svg" />
           <SelectCompany />
           <Box sx={{ flexGrow: 1 }} />
           <Box mr={2}>

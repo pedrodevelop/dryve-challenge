@@ -8,11 +8,10 @@ const List = styled(MuiList)(({ theme }) => ({
     backgroundColor: '#0065FF',
     color: '#FFFFFF',
     '&:hover': {
-      backgroundColor: '#3F8BFF'
+      backgroundColor: '#014EDC'
     },
-    '& .itemsIcon': {
-      fill: 'none',
-      color: '#FFFFFF'
+    '& .MuiListItemIcon-root path': {
+      stroke: '#FFFFFF'
     },
     transition: theme.transitions.create('background-color', {
       easing: theme.transitions.easing.sharp,

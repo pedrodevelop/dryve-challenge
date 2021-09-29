@@ -1,12 +1,6 @@
 import React from 'react';
 
-import {
-  Box,
-  Button,
-  ListItemIcon,
-  ListItemText,
-  SvgIcon
-} from '@material-ui/core';
+import { Box, Button, ListItemIcon, ListItemText } from '@material-ui/core';
 
 import ListItem from './Items';
 import List from './List';
@@ -40,9 +34,7 @@ function Drawer() {
         <List>
           {drawerItems.map(item => (
             <ListItem href={item.page} key={item.text}>
-              <ListItemIcon>
-                <SvgIcon className="itemsIcon">{getIcon(item.icon)}</SvgIcon>
-              </ListItemIcon>
+              <ListItemIcon>{getIcon(item.icon)}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItem>
           ))}
@@ -61,7 +53,7 @@ function Drawer() {
             onClick={handleDrawerControl}
             variant="text"
           >
-            <img alt="" src="assets/DrawerIcons/RetractMenu.svg" />
+            <img alt="" src="assets/Icons/RetractMenu.svg" />
           </Button>
         </Box>
       </MuiDrawer>

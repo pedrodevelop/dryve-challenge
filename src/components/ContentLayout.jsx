@@ -5,10 +5,9 @@ import MuiBox from '@material-ui/core/Box';
 
 import { styled } from '@material-ui/core/styles';
 
-const Box = styled(MuiBox)(({ theme }) => ({
+const Box = styled(MuiBox)(() => ({
   height: '100vh',
   flexGrow: 1,
-  padding: theme.spacing(4, 0, 0, 3),
   backgroundColor: '#f9f9f9'
 }));
 

@@ -8,9 +8,8 @@ const ListItem = styled(MuiListItem)(({ theme }) => ({
   borderRadius: 6,
   height: 40,
   marginBottom: theme.spacing(1),
-  '& .itemsIcon': {
-    fill: '#FFF',
-    color: '#1D2C4B'
+  '& .MuiListItemIcon-root path': {
+    stroke: '#1D2C4B'
   },
   '& .MuiListItemIcon-root': {
     paddingRight: theme.spacing(1)
@@ -21,9 +20,8 @@ const ListItem = styled(MuiListItem)(({ theme }) => ({
   '&:hover': {
     backgroundColor: '#0065FF',
     color: '#FFFFFF',
-    '& .itemsIcon': {
-      fill: 'none',
-      color: '#FFFFFF'
+    '& .MuiListItemIcon-root path': {
+      stroke: '#FFFFFF'
     },
     transition: theme.transitions.create('background-color', {
       easing: theme.transitions.easing.sharp,

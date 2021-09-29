@@ -12,8 +12,8 @@ function SelectCompany() {
       <Button
         id="companyMenu"
         disableRipple
-        startIcon={<img alt="" src="/assets/Company.svg" />}
-        endIcon={<img alt="" src="/assets/Path.svg" />}
+        startIcon={<img alt="" src="/assets/Icons/Company.svg" />}
+        endIcon={<img alt="" src="/assets/Icons/Path.svg" />}
       >
         {companies.map(company => (
           <Typography key={company.id}>{company.name}</Typography>
