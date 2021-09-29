@@ -11,7 +11,7 @@ import {
   Typography
 } from '@material-ui/core';
 
-function ExpiredCard(props) {
+function ScheduledCard(props) {
   const {
     brandName,
     fuel,
@@ -62,7 +62,7 @@ function ExpiredCard(props) {
   );
 }
 
-ExpiredCard.propTypes = {
+ScheduledCard.propTypes = {
   brandName: PropTypes.string,
   fuel: PropTypes.string,
   image: PropTypes.string,
@@ -74,4 +74,4 @@ ExpiredCard.propTypes = {
   price: PropTypes.number
 };
 
-export default ExpiredCard;
+export default ScheduledCard;
