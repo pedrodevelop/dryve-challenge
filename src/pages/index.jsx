@@ -94,7 +94,7 @@ function DashBoard(props) {
           </Grid>
           <Grid item xs={6}>
             <Card>
-              <CardHeader title="Test-drives vencidos" />
+              <CardHeader title="Test-drives do dia" />
               <Divider />
               <List style={{ overflow: 'scroll' }}>
                 {response.map(data => (
