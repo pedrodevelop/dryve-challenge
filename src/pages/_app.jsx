@@ -3,11 +3,23 @@ import PropTypes from 'prop-types';
 
 import GlobalStyle from '../styles/global';
 
+import Layout from '../components/MainLayout';
+
+import Drawer from '../components/Drawer';
+import Header from '../components/Header';
+import ContentLayout from '../components/ContentLayout';
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
-      <GlobalStyle />
+      <Layout>
+        <Header />
+        <Drawer />
+        <ContentLayout>
+          <Component {...pageProps} />
+        </ContentLayout>
+        <GlobalStyle />
+      </Layout>
     </>
   );
 }
