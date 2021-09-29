@@ -14,7 +14,6 @@ import {
 function ExpiredCard(props) {
   const {
     brandName,
-    expiredTime,
     fuel,
     image,
     name,
