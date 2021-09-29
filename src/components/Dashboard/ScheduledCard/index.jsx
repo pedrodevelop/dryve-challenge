@@ -64,7 +64,6 @@ function ExpiredCard(props) {
 
 ExpiredCard.propTypes = {
   brandName: PropTypes.string,
-  expiredTime: PropTypes.number,
   fuel: PropTypes.string,
   image: PropTypes.string,
   name: PropTypes.string,
