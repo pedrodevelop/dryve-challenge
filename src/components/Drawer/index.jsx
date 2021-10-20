@@ -7,7 +7,7 @@ import List from './List';
 
 import { MuiDrawer, DrawerHeader } from './styles';
 
-import getIcon from '../GetIcon';
+import getIcon from '../getIcon';
 
 const drawerItems = [
   { text: 'Resumo', icon: 'dashboard', page: '/' },

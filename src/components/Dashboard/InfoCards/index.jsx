@@ -12,7 +12,7 @@ import {
 
 import Card from './styles';
 
-import getIcon from '../../GetIcon';
+import getIcon from '../../getIcon';
 
 function InfoCard(props) {
   const { title, value, icon } = props;
